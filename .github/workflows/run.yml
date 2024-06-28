@@ -22,7 +22,7 @@ jobs:
 
     - name: Generate Prime Numbers
       if: steps.cache-primes.outputs.cache-hit != 'true'
-      run: echo 13579 > prime-numbers
+      run: echo 13579 > prime-numbers && exit 1
 
     - name: Use Prime Numbers
       run: cat prime-numbers
